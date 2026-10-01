@@ -1,3 +1,126 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.site-header {
+	min-height: 88px;
+	padding: 0 clamp(20px, 6vw, 88px);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 32px;
+	background: var(--header-ink);
+	border-bottom: 1px solid rgba(244, 243, 237, 0.12);
+}
+
+.brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 13px;
+	color: var(--header-paper);
+	text-decoration: none;
+	flex-shrink: 0;
+}
+
+.brand-mark {
+	width: 44px;
+	height: 44px;
+	display: grid;
+	place-items: center;
+	border: 1px solid var(--header-accent);
+	color: var(--header-accent);
+	font-family: Georgia, serif;
+	font-size: 25px;
+	font-style: italic;
+	line-height: 1;
+	transform: skew(-8deg);
+}
+
+.brand-name {
+	font-size: 17px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.brand-name span {
+	color: var(--header-muted);
+	font-weight: 400;
+}
+
+.site-nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: clamp(18px, 3vw, 42px);
+}
+
+.nav-link {
+	position: relative;
+	padding: 34px 0 32px;
+	color: var(--header-paper);
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: color 160ms ease;
+}
+
+.nav-link::after {
+	position: absolute;
+	right: 0;
+	bottom: 22px;
+	left: 0;
+	height: 2px;
+	background: var(--header-accent);
+	content: "";
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 160ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link-active {
+	color: var(--header-accent);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link-active::after {
+	transform: scaleX(1);
+}
+
+@media (max-width: 600px) {
+	.site-header {
+		min-height: 0;
+		padding: 18px 20px 0;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.site-nav {
+		width: 100%;
+		justify-content: space-between;
+		gap: 12px;
+	}
+
+	.nav-link {
+		padding: 12px 0 16px;
+		font-size: 12px;
+	}
+
+	.nav-link::after {
+		bottom: 8px;
+	}
+}
+=======
 /* ===== Thème global ===== */
 :root {
   --color-primary: #2563eb;
