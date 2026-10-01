@@ -1,11 +1,3 @@
-:root {
-	color-scheme: light;
-	--header-ink: #111513;
-	--header-paper: #f4f3ed;
-	--header-muted: #a5aaa4;
-	--header-accent: #d2f36b;
-}
-
 * {
 	box-sizing: border-box;
 }
@@ -127,4 +119,39 @@ body {
 	.nav-link::after {
 		bottom: 8px;
 	}
+}
+=======
+/* ===== Thème global ===== */
+:root {
+  --color-primary: #2563eb;
+  --color-bg: #f9fafb;
+  --color-text: #1f2937;
+  --font-main: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+button, .btn, .btn-cta {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
 }
